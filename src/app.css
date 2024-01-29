@@ -1,0 +1,85 @@
+#app {
+    gap: .5rem;
+    width: 100%;
+    display: grid;
+    max-width: 350px;   
+    overflow: hidden;
+}
+
+#app .display {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background: #17181dcb;
+    justify-content: right;
+    border-radius: 1rem;
+    border: 2px solid #292c35;
+    overflow: hidden;
+}
+
+#app .display .content {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding-right: 1rem;
+    align-content: center;
+    overflow-y: none;
+    overflow-x: scroll;
+    place-items: end;
+    scrollbar-width: thin;
+}
+
+#app .display .content::-webkit-scrollbar { height: 7px; }
+#app .display .content::-webkit-scrollbar-thumb {
+    background: #7f00d4;
+}
+
+#app .display .content h1 { 
+    color: #fff;
+    font-size: 2.5em; 
+    min-height: 40px 
+}
+#app .display .content h3 { color: #999; font-size: 1.5em; }
+
+#app .buttons {
+    gap: .25rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#app .buttons .clear,
+#app .buttons .button {
+    height: 70px;
+    color: #ffff;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1em;
+    border-radius: .5rem;
+    background: #17181dcb;
+    border: 2px solid #292c35;
+}
+
+
+
+#app .buttons button:hover {
+    background: #7f00d4;
+}
+
+#app .equals,
+#app .allClear {
+    grid-column: span 2;
+    background: #7f00d4;
+    height: 70px;
+    color: #ffff;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: .5rem;
+    border: 2px solid #7f00d4;
+}
+
+#app .equals:hover,
+#app .allClear:hover {
+    background: #dba4ff;
+}
